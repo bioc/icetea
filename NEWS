@@ -1,0 +1,7 @@
+CHANGES IN VERSION 1.19.1
+-------------------------
+
+MINOR CHANGES
+
+  o The rowSums, and colSums generics are now imported
+    from the MatrixGenerics package instead of BiocGenerics.

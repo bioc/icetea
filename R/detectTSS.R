@@ -51,8 +51,8 @@ strandBinCounts <- function(bam.files, restrictChrs, bam_param,
             param = bam_param,
             BPPARAM = bp_param)
     coldat <- S4Vectors::DataFrame(bam.files = bam.files,
-                                    forward.totals = BiocGenerics::colSums(assay(fdata)),
-                                    reverse.totals = BiocGenerics::colSums(assay(rdata)),
+                                    forward.totals = MatrixGenerics::colSums(assay(fdata)),
+                                    reverse.totals = MatrixGenerics::colSums(assay(rdata)),
                                     ext = NA,
                                     rlen = 1L)
     combined <- SummarizedExperiment::SummarizedExperiment(
@@ -60,7 +60,7 @@ strandBinCounts <- function(bam.files, restrictChrs, bam_param,
                             rowRanges = c(rowRanges(fdata), rowRanges(rdata)),
                             colData = coldat)
     # drop empty bins
-    combined <- combined[BiocGenerics::rowSums(assay(combined)) > 0]
+    combined <- combined[MatrixGenerics::rowSums(assay(combined)) > 0]
     # Suggestion : Drop bins with counts < threshold ?
     combined$totals <- combined$forward.totals + combined$reverse.totals
     return(combined)
