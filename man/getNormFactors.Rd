@@ -28,6 +28,7 @@ Calculate normalization factors from CapSet object
 
  # load a txdb object
  library("TxDb.Dmelanogaster.UCSC.dm6.ensGene")
+ library(GenomeInfoDb)  # for seqlevelsStyle()
  seqlevelsStyle(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "ENSEMBL"
 
  # get genes (only X chromsome, for simplicity)

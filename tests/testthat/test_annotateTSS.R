@@ -2,6 +2,7 @@ context("icetea")
 
 test_that("TSS annotation produces correct table", {
     library("TxDb.Dmelanogaster.UCSC.dm6.ensGene")
+    library(GenomeInfoDb)  # for seqlevelsStyle()
     seqlevelsStyle(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "ENSEMBL"
     seqlevels(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "X"
     dir <- system.file("extdata", package = "icetea")

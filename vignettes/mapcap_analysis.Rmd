@@ -248,6 +248,7 @@ In case of well annotated genomes, one way to check the quality of TSS detection
 
 ```{r plotPrecision, eval=TRUE, results = "hold", fig.width=7, fig.height=5}
 library("TxDb.Dmelanogaster.UCSC.dm6.ensGene")
+library(GenomeInfoDb)  # for seqlevelsStyle()
 seqlevelsStyle(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "ENSEMBL"
 # only analyse genes on chrX to make the analysis faster
 seqlevels(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "X"

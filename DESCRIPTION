@@ -1,7 +1,7 @@
 Package: icetea
 Type: Package
 Title: Integrating Cap Enrichment with Transcript Expression Analysis
-Version: 1.27.0
+Version: 1.27.1
 Authors@R: person("Vivek", "Bhardwaj", email = "v.bhardwaj@hubrecht.eu", role = c("aut", "cre"))
 Description: icetea (Integrating Cap Enrichment with Transcript Expression Analysis)
     provides functions for end-to-end analysis of multiple 5'-profiling methods such as
@@ -37,6 +37,7 @@ Imports:
     DESeq2,
     TxDb.Dmelanogaster.UCSC.dm6.ensGene
 Suggests:
+    GenomeInfoDb,
     knitr,
     rmarkdown,
     Rsubread (>= 1.29.0),
@@ -48,4 +49,4 @@ URL: https://github.com/vivekbhr/icetea
 BugReports: https://github.com/vivekbhr/icetea/issues
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.3.2

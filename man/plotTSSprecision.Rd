@@ -61,6 +61,7 @@ Plot precision of TSS detection from multiple samples present within a
 
 # load a txdb object
 suppressMessages(library("TxDb.Dmelanogaster.UCSC.dm6.ensGene"))
+library(GenomeInfoDb)  # for seqlevelsStyle()
 seqlevelsStyle(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "ENSEMBL"
 transcripts <- transcripts(TxDb.Dmelanogaster.UCSC.dm6.ensGene)
 
@@ -74,6 +75,7 @@ plotTSSprecision(reference = transcripts, detectedTSS = tssfile,
 ## Plotting the precision using a CapSet object :
 
 library("TxDb.Dmelanogaster.UCSC.dm6.ensGene")
+library(GenomeInfoDb)  # for seqlevelsStyle()
 seqlevelsStyle(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "ENSEMBL"
 # only use chrX to make the analysis faster
 seqlevels(TxDb.Dmelanogaster.UCSC.dm6.ensGene) <- "X"
